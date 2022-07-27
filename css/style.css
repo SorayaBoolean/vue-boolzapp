@@ -10,7 +10,7 @@ header, footer{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgb(170, 165, 165);
+    background-color: rgb(209, 209, 209);
     height: 100%;
 }
 .avatar_img img {
@@ -27,7 +27,8 @@ header, footer{
     margin-top: 5px;
     text-align: center;
     background-color: white;
-    color: black;
+    color: rgb(127, 214, 255);
+    font-size:x-large
 }
 .container {
     margin:auto;
@@ -38,7 +39,7 @@ header, footer{
 }
 .col_contacts {
     height: 700px;
-    width: 30%;  
+    width: 40%;  
 }
 .contacts{
     overflow:scroll;
@@ -51,11 +52,12 @@ header, footer{
     border: navajowhite;
 }
 .col_messages {
-    width: 70%;    
+    width: 60%;    
 }
 .conversation_box {
     height: 565px;
     background-image: url(../img/wallpaper.jpg);
+    overflow:scroll;
 }
 
 /***********General Rules************/
@@ -75,6 +77,15 @@ header, footer{
 .ml-20{
     margin-left: 20px;
 }
+.mt-20{
+    margin-top: 20px;
+}
+.mt-10{
+    margin-top: 10px;
+}
+.mr-10{
+    margin-right: 10px;
+}
 .d-flex{
     display: flex;
 }
@@ -84,11 +95,14 @@ header, footer{
 .bg-col-gray{
     background-color: lightgrey;
 }
+.color-gray {
+    color: rgb(99, 97, 97);
+}
 .bor-left {
     border-left: 1px solid rgb(133, 131, 131);
 }
 .bord-bottom{
-    border-bottom: 1px solid rgb(156, 154, 154);;
+    border-bottom: 1px solid rgb(209, 206, 206);;
 }
 .text-decoration{
     text-decoration:underline;
