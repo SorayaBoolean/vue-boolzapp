@@ -3,3 +3,96 @@
     padding: 0;
     box-sizing: border-box;
 }
+ body{
+    background-image: url(../img/whatsapp-wallpaper-thumbnail.jpg);
+}
+header, footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(170, 165, 165);
+    height: 100%;
+}
+.avatar_img img {
+    height: 50px;
+    border-radius: 50%;
+}
+.notice {
+    background-color: rgb(127, 214, 255);
+}
+.bell_icon{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    margin-top: 5px;
+    text-align: center;
+    background-color: white;
+    color: black;
+}
+.container {
+    margin:auto;
+    margin-top: 50px;
+    width: 1000px;
+    height: 700px;
+    z-index: 999;
+}
+.col_contacts {
+    height: 700px;
+    width: 30%;  
+}
+.contacts{
+    overflow:scroll;
+    height: 500px;
+}
+.search_inp{
+    margin-left: 8px;
+    margin-top: 7px;
+    border-radius: 10px;
+    border: navajowhite;
+}
+.col_messages {
+    width: 70%;    
+}
+.conversation_box {
+    height: 565px;
+    background-image: url(../img/wallpaper.jpg);
+}
+
+/***********General Rules************/
+
+.h-4rem{
+    height: 4rem; 
+}
+.h-3rem{
+    height: 3rem;
+}
+.w-95{
+    width: 95%;
+}
+.py-20{
+    padding-left:20px;
+}
+.ml-20{
+    margin-left: 20px;
+}
+.d-flex{
+    display: flex;
+}
+.flex-between{
+    justify-content: space-between;
+}
+.bg-col-gray{
+    background-color: lightgrey;
+}
+.bor-left {
+    border-left: 1px solid rgb(133, 131, 131);
+}
+.bord-bottom{
+    border-bottom: 1px solid rgb(156, 154, 154);;
+}
+.text-decoration{
+    text-decoration:underline;
+}
+
+
+
