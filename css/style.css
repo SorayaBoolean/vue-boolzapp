@@ -78,6 +78,11 @@ header, footer{
     background-color: white;
 }
 
+.contact:hover {
+    cursor: pointer;
+    background-color: rgb(196, 194, 194);
+}
+
 /***********General Rules************/
 
 .h-4rem{
