@@ -20,16 +20,15 @@
                         <img src="img/avatar_io.jpg" alt="my-avatar-img">
                         </div>   
                         <div class="my_name ">
-                            <p class="py-20 mt-10">Soraya</p>
+                            <p class="py-20 mt-10 ">Soraya</p>
                         </div>
                     </div>
-                    <div class="header_btn mr-10">   
+                    <div class="header_btn mr-10 color-gray">   
                         <i class="fa-regular fa-circle "></i>
                         <i class="fa-solid fa-message"></i>
                         <i class="far fa-user"></i>
                     </div>
                 </header>
-
                 <div class="notice h-4rem d-flex">
                     <div class="bell_icon ml-20">
                         <i class="far fa-bell-slash mt-10"></i>
@@ -44,114 +43,33 @@
                     <input class="search_inp w-95 h-3rem" type="text">
                 </div>
 
-                <div class="contacts bg-col-gray">
-                        
-                    <div class="contact h-4rem bord-bottom">
+
+                <div class="contacts bg-col-gray">    
+                    <div v-for="contact in contacts" class="contact h-4rem bord-bottom">
                         <div class="user_data d-flex">
-
                             <div class="avatar_img ml-20">
-                              <img src="img/avatar_1.jpg" alt="avatar-img">
+                              <img :src="'img/avatar' + contact.avatar + '.jpg'">
                             </div>
-
                              <div class="user_text py-20">
-                                <p class="user_name">Mario</p>
+                                <p  class="user_name">{{contact.name}}</p>
                                 <p class="text-decoration color-gray">ultimo messaggio inviato</p>
-                            </div>
-                             
-                               
-                         </div>
-                        
+                            </div>     
+                         </div>  
                     </div>
-
-                    <div class="contact h-4rem bord-bottom">
-                        <div class="user_data d-flex">
-
-                            <div class="avatar_img ml-20">
-                              <img src="img/avatar_1.jpg" alt="avatar-img">
-                            </div>
-
-                             <div class="user_text py-20">
-                                <p class="user_name">Mario</p>
-                                <p class="text-decoration color-gray">ultimo messaggio inviato</p>
-                            </div>
-                             
-                               
-                         </div>
-                        
-                    </div>
-
-                    <div class="contact h-4rem bord-bottom">
-                        <div class="user_data d-flex">
-
-                            <div class="avatar_img ml-20">
-                              <img src="img/avatar_1.jpg" alt="avatar-img">
-                            </div>
-
-                             <div class="user_text py-20">
-                                <p class="user_name">Mario</p>
-                                <p class="text-decoration color-gray">ultimo messaggio inviato</p>
-                            </div>
-                             
-                               
-                         </div>
-                        
-                    </div>
-
-                    <div class="contact h-4rem bord-bottom">
-                        <div class="user_data d-flex">
-
-                            <div class="avatar_img ml-20">
-                              <img src="img/avatar_1.jpg" alt="avatar-img">
-                            </div>
-
-                             <div class="user_text py-20">
-                                <p class="user_name">Mario</p>
-                                <p class="text-decoration color-gray">ultimo messaggio inviato</p>
-                            </div>
-                             
-                               
-                         </div>
-                        
-                    </div>
-
-                    <div class="contact h-4rem bord-bottom">
-                        <div class="user_data d-flex">
-
-                            <div class="avatar_img ml-20">
-                              <img src="img/avatar_1.jpg" alt="avatar-img">
-                            </div>
-
-                             <div class="user_text py-20">
-                                <p class="user_name">Mario</p>
-                                <p class="text-decoration color-gray">ultimo messaggio inviato</p>
-                            </div>
-                             
-                               
-                         </div>
-                        
-                    </div>
-                    
-                   
-                    
-                    
-
                 </div>
             </div>
-
-
-
 
             <div class="col_messages ">
               <header class="h-4rem bor-left">
                 <div class="my_data d-flex">
                     <div class="avatar_img ml-20">
-                     <img src="img/avatar_io.jpg" alt="my-avatar-img">
+                     <img :src=" 'img' + 'contacts[selectedContact].avatar'">
                      </div>   
                      <div class="my_name ">
-                         <p class="py-20 mt-10">Soraya</p>
+                         <p class="py-20 mt-10">Name</p>
                      </div>
                  </div>
-                 <div class="header_btn mr-10">   
+                 <div class="header_btn mr-10 color-gray">   
                      <i class="fa-regular fa-circle "></i>
                      <i class="fa-solid fa-message"></i>
                      <i class="far fa-user"></i>
@@ -159,10 +77,21 @@
               </header>
 
               <div class="conversation_box">
-
+                    <div class="message sent received ml-20">
+                        <p class="ml-20 mt-20 pt-20 pb-20"></p>
+                    </div>
               </div>
-              <footer class="h-4rem">
 
+              <footer class="h-4rem d-flex flex-between">
+                <div class="emoji_btn ml-20 color-gray">
+                    <i class="fa-regular fa-face-smile"></i>
+                </div>
+                <div class="input_message">
+                    <input class="h-3rem" type="text">
+                </div>
+                <div class="send_message_btn mr-20 color-gray">
+                    <i class="fa-regular fa-paper-plane"></i>
+                </div>
               </footer>
             </div>
         </div>
@@ -172,7 +101,7 @@
 
 
 
-
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <script type="text/javascript" src="index.js"></script>
 </body>
 </html>
