@@ -167,15 +167,15 @@ var app = new Vue(
             }
         ] , 
         
-        selectedContact: 0,
+        currentContact: 0,
     },
 
     methods: {
-  
-        
+
+        //qui serve funzione per click
     }
 
-   }
+    }  
 )
 
 

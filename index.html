@@ -45,7 +45,7 @@
 
 
                 <div class="contacts bg-col-gray">    
-                    <div v-for="contact in contacts" class="contact h-4rem bord-bottom d-flex">
+                    <div v-for="(contact, index) in contacts" class="contact h-4rem bord-bottom d-flex"> <!--Qui serve v-on:click per elezionare contatto-->
                         <div class="user_data d-flex">
                             <div class="avatar_img ml-20">
                               <img :src="'img/avatar' + contact.avatar + '.jpg'">
@@ -64,10 +64,10 @@
               <header class="h-4rem bor-left">
                 <div class="my_data d-flex">
                     <div class="avatar_img ml-20">
-                     
+                     <img src="" alt="Img">
                      </div>   
                      <div class="my_name ">
-                         <p class="py-20 mt-10">Name</p>
+                         <p class="py-20 mt-10">Selectedcontact</p>
                      </div>
                  </div>
                  <div class="header_btn mr-10 color-gray">   
@@ -77,9 +77,9 @@
                  </div>
               </header>
 
-              <div class="conversation_box">
-                    <div v-for="(contact, indice) in contacts" class="message ml-20">
-                        <p class="ml-20 mt-20 pt-20 pb-20">{{contact.messages}}</p>
+              <div class="conversation_box"> <!--Qui serve v-for per mostrare testo contatto selezionato-->
+                    <div v-for="(contact, index) in contacts" class="message ml-20">
+                        <p class="ml-20 mt-20 pt-20 pb-20">{{contact[currentContact]}}</p>
                     </div>
               </div>
 
