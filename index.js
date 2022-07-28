@@ -165,7 +165,14 @@ var app = new Vue(
             }
             ],
             }
-        ] ,   
+        ] , 
+        
+        selectedContact: 0,
+    },
+
+    methods: {
+  
+        
     }
 
    }

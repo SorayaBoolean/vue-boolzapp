@@ -45,15 +45,16 @@
 
 
                 <div class="contacts bg-col-gray">    
-                    <div v-for="contact in contacts" class="contact h-4rem bord-bottom">
+                    <div v-for="contact in contacts" class="contact h-4rem bord-bottom d-flex">
                         <div class="user_data d-flex">
                             <div class="avatar_img ml-20">
                               <img :src="'img/avatar' + contact.avatar + '.jpg'">
                             </div>
                              <div class="user_text py-20">
-                                <p  class="user_name">{{contact.name}}</p>
-                                <p class="text-decoration color-gray">ultimo messaggio inviato</p>
-                            </div>     
+                                <p  class="user_name mt-10">{{contact.name}}</p>
+                                <small class="color-gray ">ultimo messaggio inviato</small>
+                            </div>
+                               
                          </div>  
                     </div>
                 </div>
@@ -63,7 +64,7 @@
               <header class="h-4rem bor-left">
                 <div class="my_data d-flex">
                     <div class="avatar_img ml-20">
-                     <img :src=" 'img' + 'contacts[selectedContact].avatar'">
+                     
                      </div>   
                      <div class="my_name ">
                          <p class="py-20 mt-10">Name</p>
@@ -77,8 +78,8 @@
               </header>
 
               <div class="conversation_box">
-                    <div class="message sent received ml-20">
-                        <p class="ml-20 mt-20 pt-20 pb-20"></p>
+                    <div v-for="(contact, indice) in contacts" class="message ml-20">
+                        <p class="ml-20 mt-20 pt-20 pb-20">{{contact.messages}}</p>
                     </div>
               </div>
 
