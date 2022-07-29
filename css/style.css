@@ -103,6 +103,9 @@ header, footer{
 .pb-20{
     padding-bottom: 20px;
 }
+.pr-10{
+    padding-right: 10px;
+}
 .ml-10{
     margin-left: 10px;
 }

@@ -3,6 +3,8 @@ var app = new Vue(
     el: '#app',
     data: {
 
+        currentContact: 0,
+
         contacts: [
             {
             name: 'Michele',
@@ -166,13 +168,24 @@ var app = new Vue(
             ],
             }
         ] , 
+       
+        newText : ''
         
-        currentContact: 0,
     },
 
     methods: {
+        
+        sendMessage () {
 
-        //qui serve funzione per click
+            const newMessageObj= {
+                date: '----',
+                message: this.newText,
+                status: 'sent'
+            };
+
+        this.contacts[this.currentContact].messages.push(newMessageObj)
+        }
+    
     }
 
     }  
