@@ -1,3 +1,4 @@
+
 var app = new Vue(
    { 
     el: '#app',
@@ -184,8 +185,19 @@ var app = new Vue(
             };
 
         this.contacts[this.currentContact].messages.push(newMessageObj)
-        }
+        
+        setTimeout ( (parametro) => {
+            const newMessageResponseObj= {
+                date: '----',
+                message: 'Ok',
+                status: 'received'
+            };
+
+            this.contacts[this.currentContact].messages.push(newMessageResponseObj)
+        },1000);    
     
+    },
+
     }
 
     }  
